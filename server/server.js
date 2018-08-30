@@ -6,8 +6,9 @@ const express = require('express'),
 
 
       app.use(express.static(publicPath));
+      app.use("/images",express.static(__dirname + "../public/images"));
       app.use(favicon(path.join(__dirname, '../public/images', 'eric.ico')));
-
+      
 
       app.get('*',(req,res)=>{
           res.sendFile(path.join(publicPath,'index.html'));
