@@ -1,10 +1,11 @@
 import React from 'react';
 
 const ExpanseDashboardPage =()=>(
-    <div className="section2">
-    <section className="Header">
-    <div className="bg-img"></div>
-    <h2>this is h2</h2>
+    <div>
+    <section id="section2">
+    <header id='major' >
+    <h2 >this is h2</h2>
+    </header>
     </section>
     </div>
 );
