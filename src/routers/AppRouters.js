@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Route,Switch,Link,NavLink} from 'react-router-dom';
 import Header from '../components/Header';
-import ExpanseDashboardPage from '../components/ExpanseDashboardPage';
+import Section2 from '../components/Section2';
 import Section1 from '../components/Section1';
 
 const AppRouter=()=>(
@@ -10,7 +10,7 @@ const AppRouter=()=>(
     <Header />
     <Section1 />
     <Switch>
-    <Route path="/" component={ExpanseDashboardPage} exact={true}/>
+    <Route path="/" component={Section2} exact={true}/>
     </Switch>
     </div>
     </BrowserRouter>

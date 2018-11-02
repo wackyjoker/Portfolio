@@ -18,15 +18,15 @@ a:hover{
   background-image:url($urls1);
 	width: 100%;
   height:100vh;
-  min-height: 35em;
 	z-index: 10;
   background-size:cover;
   background-color: #80a3db;
   flex-direction: column;
   text-align: center;
   overflow:hidden;
-  position: relative;
-  
+  position: absolute;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 #header{
@@ -38,12 +38,24 @@ a:hover{
   width:100%;
   animation: 1s headerin 1s forwards;
   opacity:0;
+  display:flex;
+  flex-wrap:wrap;
+justify-content: space-between;
 }
 @keyframes headerin{
 	100%{
     opacity:1;
 	}
 }
+
+nav{
+  width:100%;
+  padding:5vh 20%;
+  display:flex;
+  justify-content: space-between;
+  float:right;
+}
+
 #inner{
   animation: 2s innerin 2s forwards;
   opacity:0;
@@ -60,6 +72,7 @@ a:hover{
   letter-spacing:0.3em;
   display:inline-block;
   animation: 2s s1h2down 2s ease-out forwards;
+  
 }
 @keyframes s1h2down{
 	100%{
@@ -75,6 +88,17 @@ a:hover{
   opacity:0;
   color:black;
 }
+#s1h2:hover  span span{
+    animation: namehover 0.2s forwards ease-in;
+    
+}
+@keyframes namehover {
+	100%{
+		opacity:1;
+    bottom:-9em;
+	}
+}
+
 #intro{
   position: absolute;
   height: 8em;
@@ -130,11 +154,6 @@ ul {
 h2{
   margin:auto;
 }
-nav{
-  padding:5vh 20%;
-  display:flex;
-  justify-content: space-between
-}
 
 .router {
   margin-right: auto;
@@ -182,7 +201,7 @@ button {
 
 #major{
   background-image:url($urls2);
-	width: 100%;
+	
 	height:60em;
 	z-index: -1;
   background-size:cover;

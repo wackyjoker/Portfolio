@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ExpanseDashboardPage =()=>(
+const Section2 =()=>(
     <div>
     <section id="section2">
     <header id='major' >
@@ -10,4 +10,4 @@ const ExpanseDashboardPage =()=>(
     </div>
 );
 
-export default ExpanseDashboardPage;
+export default Section2;
