@@ -157,33 +157,6 @@ h2{
   margin:auto;
 }
 
-.router {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-  width: 100%;
-  max-width: 100%;
-}
-
-@media (min-width: 768px) {
-  .router{
-    width: 750px;
-  }
-}
-
-@media (min-width: 787px) {
-  .router{
-    width: 970px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .router{
-    width: 1170px;
-  }
-}
-
 button {
   cursor: pointer;
 }
@@ -204,3 +177,11 @@ button {
   background-size:cover;
   background-color: #80a3db;
 }
+
+
+@media only screen and (max-width : 860px){
+  a{
+      color:pink;
+  }
+}
+

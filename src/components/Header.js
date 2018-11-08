@@ -2,9 +2,9 @@ import React from 'react';
 
 const Header = ()=>(
     <header id='header'>
-    <nav className="navbar">
+    <nav className="s1-navbar">
     
-    <a className="" href="#">WebSiteName</a>
+    <a href="#">WebSiteName</a>
     
     <div id="pageList">
     <ul id="header-ul">
