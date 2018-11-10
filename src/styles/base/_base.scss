@@ -51,7 +51,7 @@ a:hover{
 	}
 }
 
-nav{
+.s1-navbar{
   width:100%;
   padding:5vh 20%;
   display:flex;
@@ -59,6 +59,7 @@ nav{
   justify-content: space-between;
   float:right;
 }
+
 
 #inner{
   animation: 2s innerin 2s forwards;
@@ -171,7 +172,6 @@ button {
 
 #major{
   background-image:url($urls2);
-	
 	height:60em;
 	z-index: -1;
   background-size:cover;
@@ -179,9 +179,5 @@ button {
 }
 
 
-@media only screen and (max-width : 860px){
-  a{
-      color:pink;
-  }
-}
+
 

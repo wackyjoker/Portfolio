@@ -1,6 +1,27 @@
-@media only screen and (max-width : 860px){
-    a{
-        color:pink;
-    }
-}
+@import "../../../node_modules/breakpoint-sass/stylesheets/_breakpoint";
 
+  a{
+        border:dashed 5px pink;
+        @include breakpoint($small-width){
+            border:solid 5px green;
+        }
+      @include breakpoint($medium-width){
+          border:solid 5px black;
+          
+      }
+      
+  }
+  .s1-navbar{
+    @include breakpoint($small-width){
+        display:none;
+       }
+      @include breakpoint($medium-width){
+       padding:10vh 10%;
+      }
+      
+  }
+  #header{
+    @include breakpoint($small-width){
+       
+    };
+  }
