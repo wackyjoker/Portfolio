@@ -4,9 +4,19 @@ $s-size: 1.2em;
 $m-size: 1.6em;
 $l-size: 3.2em;
 $xl-size: 4.8em;
-    $small-width:(max-width:767px);
-    $medium-width:(max-width:1032px);
-    $large-width:(max-width:1344px);
+
+// $small-size : max-width 640px;
+// $medium-size : 641px 1044px;
+// $xl-size : min-width 1044px;
+// assume min-width (by default) if only a number
+$high-tide: 801px;
+// set min-width/max-width if both values are numbers
+$ex-presidents: 600px 800px;
+// if one value is a string, assume a feature/value pair
+$surfboard-width: max-width 599px;
+// string tests together within parentheses, assume each item is a feature value pair
+$surfboard-height: (min-height 1000px) (orientation portrait);
+
 $urls1: "/images/bgs1.jpg";
 $urls2: "/images/bgs2.jpg";
 $urlarrow:'/images/arrow.svg';

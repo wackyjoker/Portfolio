@@ -1,27 +1,32 @@
 @import "../../../node_modules/breakpoint-sass/stylesheets/_breakpoint";
 
-  a{
-        border:dashed 5px pink;
-        @include breakpoint($small-width){
-            border:solid 5px green;
-        }
-      @include breakpoint($medium-width){
-          border:solid 5px black;
+  // a{
+  //   @include breakpoint($xl-size){
+  //     border:dashed 5px pink;
+  //     }
+    
+  //     @include breakpoint($medium-size){
+  //         border:solid 5px black;
           
-      }
-      
-  }
-  .s1-navbar{
-    @include breakpoint($small-width){
-        display:none;
-       }
-      @include breakpoint($medium-width){
-       padding:10vh 10%;
-      }
-      
-  }
-  #header{
-    @include breakpoint($small-width){
-       
-    };
-  }
+  //     }
+  //     @include breakpoint($small-size){
+  //       border:solid 5px green;
+  //   }
+  //   }
+
+    
+
+    // .s1-navbar{
+    //   @include breakpoint(small down){
+    //       display:none;
+    //      }
+    //     @include breakpoint(medium only){
+    //      padding:10vh 10%;
+    //     }
+        
+    // }
+    // #header{
+    //   @include breakpoint(small down){
+         
+    //   };
+    // }
