@@ -1,4 +1,4 @@
-@import "../../../node_modules/breakpoint-sass/stylesheets/_breakpoint";
+// @import "../../../node_modules/breakpoint-sass/stylesheets/_breakpoint";
 
   // a{
   //   @include breakpoint($xl-size){
@@ -30,3 +30,38 @@
          
     //   };
     // }
+
+    //laptop
+    @media only screen and(max-device-width:1440px) and (min-device-width:1045px)  {
+      a{
+      border:5px dashed pink;
+      }
+    }
+    //mobile device portrait
+    @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2){
+    body{font-size:2em;}
+    a{border:5px dashed green;}
+    #inner{margin-top:20%;}
+    .s1-navbar{ display:none; }
+    #content{font-size:1.5em; font-weight: 500;}
+  }
+    //tablet device and big mobile
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+      a{border:dashed black 5px;}
+      
+      .s1-navbar{ padding:5vh 10%; }
+      #inner{margin-top:10%;}
+    }
+    @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    a{border:dashed blue 5px;}
+    #inner{margin-top:1em;}
+      .s1-navbar{ padding:5vh 10%; }
+      
+    }
