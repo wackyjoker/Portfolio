@@ -18,8 +18,8 @@ a:hover{
   display: flex;
   background-image:url($urls1);
   width: 100%;
-  min-height:780px;
-  height:100vh;
+  min-height:896px;
+  height:100px;
 	z-index: 10;
   background-size:cover;
   background-color: #80a3db;
@@ -77,7 +77,6 @@ a:hover{
 }
 
 #s1h2{
-  color:black;
   margin-top:0;
   letter-spacing:0.3em;
   display:inline-block;
@@ -95,7 +94,7 @@ a:hover{
 }
 #s1h2 span span{
   opacity:0;
-  color:black;
+
   font-size:0.8em;
 }
 #s1h2:hover  span span{
@@ -165,6 +164,8 @@ h2{
   margin:auto;
 }
 
+
+
 button {
   cursor: pointer;
 }
@@ -178,13 +179,19 @@ button {
 }
 
 #major{
-  background-image:url($urls2);
-	height:60em;
+  
+	
 	z-index: -1;
   background-size:cover;
   background-color: #80a3db;
 }
 
+#section2{
+  background-image:url($urls2);
+  height: 100px;
+  z-index:10;
+  position:absolute;
+}
 
 
 
