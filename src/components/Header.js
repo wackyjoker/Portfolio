@@ -4,8 +4,8 @@ const Header = ()=>(
     <header id='header'>
     <nav className="s1-navbar">
     
-    <a href="#">WebSiteName</a>
     
+    <a id='head-anc' href='#'>WAC<span>K<span>evin</span></span><span>Y<span>oung</span></span></a>
     <div id="pageList">
     <ul id="header-ul">
       <li id='header-li'><a href="#">Home</a></li>

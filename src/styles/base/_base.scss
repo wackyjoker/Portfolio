@@ -12,11 +12,12 @@ a{
   
 }
 a:hover{
-  text-decoration: underline;
+  text-decoration:underline;
 }
 .section1{
   display: flex;
   background-image:url($urls1);
+  padding:10em 0;
   width: 100%;
   min-height:896px;
   height:100px;
@@ -36,15 +37,16 @@ a:hover{
   background-image: linear-gradient(to bottom, #2e3842 0%, rgba(46,56,66,0) 100%);
   z-index: 100;
   background-color:transparent;
-  position:absolute;
+  position:fixed;
   width:100%;
+  height:10%;
   animation: 1s headerin 1s forwards;
   opacity:0;
   display:flex;
   flex-wrap:wrap;
   justify-content: space-between;
-
-  
+  overflow:visible;
+  padding: 1.5em 1em;
 }
 @keyframes headerin{
 	100%{
@@ -76,44 +78,51 @@ a:hover{
 	}
 }
 
-#s1h2{
+#head-anc{
   margin-top:0;
   letter-spacing:0.3em;
   display:inline-block;
   animation: 2s s1h2down 2s ease-out forwards;
+  span{
+    writing-mode:vertical-rl;
+    text-orientation:upright;
+    vertical-align: top;
+    
+    span{
+      
+      opacity:0;
+      font-size:0.8em;
+    }
+  }
+  &:hover{
+    text-decoration: none;
+    span{
+    animation: namehover 0.2s forwards ease-in;
+    background-image: linear-gradient(to top, #2e3842 0%, rgba(46,56,66,0) 100%);
+    span{
+      background:none;
+    }
+    @keyframes namehover {
+      100%{
+        opacity:1;
+      }
+    }
+    }
+  }
 }
 @keyframes s1h2down{
 	100%{
-    margin-top:10%;
+    
 	}
 }
-#s1h2 span{
-  writing-mode:vertical-rl;
-  text-orientation:upright;
-  vertical-align: top;
-}
-#s1h2 span span{
-  opacity:0;
 
-  font-size:0.8em;
-}
-#s1h2:hover  span span{
-    animation: namehover 0.2s forwards ease-in;  
-}
-@keyframes namehover {
-	100%{
-		opacity:1;
-	}
-}
-#content{
-  
-}
+
 #intro{
   position: absolute;
   height: 8em;
   font-size:$m-size;
   font-weight: bold;
-	color:black;
+	color:#000000;
 	text-decoration:none;
   background-position: center;
   bottom:-8em;
@@ -121,6 +130,8 @@ a:hover{
   transform: translate(-46%, -50%);
   animation:3s introtime 3s forwards;
   opacity:0;
+  overflow:hidden;
+  white-space: nowrap
 }
 
 @keyframes introtime {
