@@ -17,10 +17,9 @@ a:hover{
 .section1{
   display: flex;
   background-image:url($urls1);
-  padding:10em 0;
   width: 100%;
   min-height:896px;
-  height:100px;
+  height:100%;
 	z-index: 10;
   background-size:cover;
   background-color: #80a3db;
@@ -54,6 +53,20 @@ a:hover{
 	}
 }
 
+#burger{
+  display:none;
+  width:35px;
+  height:35px;
+  
+  div{
+    border-radius:0.5em;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+}
+
 .s1-navbar{
   width:100%;
   padding:5vh 20%;
@@ -71,6 +84,7 @@ a:hover{
 #inner{
   animation: 2s innerin 2s forwards;
   opacity:0;
+  padding-top:10em;
 }
 @keyframes innerin{
 	100%{
@@ -119,41 +133,50 @@ a:hover{
 
 #intro{
   position: absolute;
-  height: 8em;
+  height: 2em;
   font-size:$m-size;
   font-weight: bold;
-	color:#000000;
+	color:rgb(223, 223, 223);
 	text-decoration:none;
   background-position: center;
-  bottom:-8em;
+  bottom:-7em;
   left:50%;
   transform: translate(-46%, -50%);
   animation:3s introtime 3s forwards;
   opacity:0;
   overflow:hidden;
-  white-space: nowrap
+  white-space: nowrap;
+  padding:0.5em;
+  border-radius: 0.5em;
+  &:after{
+    background-image: url($urlarrow);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0.2em;
+    content: '';
+    display: block;
+    height: 1.5em;
+    left: 50%;
+    margin: 0 0 0 -0.75em;
+    position: absolute;
+    width: 1.5em;
+    
+    }
+    &:hover{
+      color:rgb(223, 223, 223);
+    }
 }
 
 @keyframes introtime {
 	100%{
+    bottom:-1em;
 		opacity:1;
+    background-color:rgba(0, 0, 0, 0.486);
     
 	}
 }
-#intro::after{
-background-image: url($urlarrow);
-background-position: center;
-background-repeat: no-repeat;
-background-size: contain;
-bottom: 5em;
-content: '';
-display: block;
-height: 1.5em;
-left: 50%;
-margin: 0 0 0 -0.75em;
-position: absolute;
-width: 1.5em;
-}
+
 
 
 
@@ -171,6 +194,7 @@ ul {
 #header-li{
   margin-right:1em;
 }
+
 h2{
   margin:auto;
 }
