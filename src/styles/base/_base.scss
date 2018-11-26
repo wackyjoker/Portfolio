@@ -42,11 +42,24 @@ a:hover{
   animation: 1s headerin 1s forwards;
   opacity:0;
   display:flex;
-  flex-wrap:wrap;
+  white-space: nowrap;
   justify-content: space-between;
   overflow:visible;
   padding: 1.5em 1em;
-}
+  label{
+    display:inline-block;
+    margin : 0.5em;
+    min-width:4em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $m-size;
+    font-weight: bold;
+  }
+  input{
+    margin : 0;
+  }
+  }
+
 @keyframes headerin{
 	100%{
     opacity:1;
@@ -55,17 +68,26 @@ a:hover{
 
 #burger{
   display:none;
-  width:35px;
-  height:35px;
-  
-  div{
-    border-radius:0.5em;
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
+    width:45px;
+    height:45px;
+    margin:1em;
+    label{
+      margin:0;
+      width:45px;
+    div{
+      border-radius:0.5em;
+      width: 45px;
+      height: 5px;
+      background-color: black;
+      margin: 6px 0;
+    }
   }
-}
+  }
+  #header-ul-mobile{
+    display:none;
+    
+  }
+
 
 .s1-navbar{
   width:100%;
@@ -74,10 +96,6 @@ a:hover{
   flex-wrap:wrap;
   justify-content: space-between;
   float:right;
-
- 
-  
-  
 }
 
 
