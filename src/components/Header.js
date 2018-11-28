@@ -9,9 +9,10 @@ const Header = ()=>(
      <div></div>
      <div></div>
      </label>
-    </div>
-    <label htmlFor='show-menu' >Menu</label>
+     <label htmlFor='show-menu' >Menu</label>
     <input type='checkbox' id='show-menu' role='button' />
+    </div>
+    
     <ul id="header-ul-mobile">
       <li id='header-li'><a href="#">Home</a></li>
       <li id='header-li'><a href="#">Page 1</a></li>
