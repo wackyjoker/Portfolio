@@ -8,7 +8,7 @@ module.exports=(env)=>{
    
     return{
         mode:isProduction ? 'production' : 'development', // "production" | "development" | "none"
-    entry:"./src/app.js",
+    entry:"./src/index.js",
     output:{
         path: path.join(__dirname,"public","dist"),
         filename:"bundle.js",

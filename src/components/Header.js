@@ -3,11 +3,11 @@ import React from 'react';
 const Header = ()=>(
     <header id='header'>
     {/* small device bar */}
-    <div id='burger' >
+<div id='burger' /*onClick={transformingX(this)}*/ >
     <label htmlFor='show-menu'>
-     <div></div>
-     <div></div>
-     <div></div>
+     <div className="bar1"></div>
+     <div className="bar2"></div>
+     <div className="bar3"></div>
      </label>
      <label htmlFor='show-menu' >Menu</label>
     <input type='checkbox' id='show-menu' role='button' />

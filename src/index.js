@@ -8,6 +8,16 @@ import './styles/style.scss';
 const store = configureStore();
 
 
+
+
+const action = {
+    type:'SHOW_BAR',
+    payload:{
+        newState:'new roll'
+    }
+    
+};
+
 const jsx = (
     <Provider store = {store}>
     <AppRouters />
