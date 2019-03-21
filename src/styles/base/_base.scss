@@ -1,4 +1,5 @@
 html, body {
+  padding:0px;
   margin: 0px;
   font-family: Helvetica, Arial, sans-serif;
   font-size: $s-size;
@@ -56,61 +57,57 @@ a:hover{
 	}
 }
 
-#burger{
-  display:none;
-    width:45px;
-    height:45px;
-    margin:1em;
-    .bar1, .bar2, .bar3 {
-      width: 35px;
-      height: 5px;
-      background-color: #333;
-      margin: 6px 0;
-      transition: 0.4s;
-     }
-  
-  .change .bar1 {
-      -webkit-transform: rotate(-45deg) translate(-8px, 8px);
-      transform: rotate(-45deg) translate(-8px, 8px);
-     }
-  
-  .change .bar2 {opacity: 0;}
-  
-  .change .bar3 {
-      -webkit-transform: rotate(45deg) translate(-8px, -8px);
-      transform: rotate(45deg) translate(-8px, -8px);
-     }
-    label{
-      
-      &:nth-child(2){
-        label{
-          display:inline-block;
-          margin : 0.5em;
-          min-width:4em;
-          text-align: center;
-          text-transform: uppercase;
-          font-size: $m-size;
-          font-weight: bold;
-        }
-      }
-    div{
-      border-radius:0.5em;
-      width: 45px;
-      height: 5px;
-      background-color: black;
-      margin: 6px 0;
-    }
-  }
-  input{
-    margin : 0;
-  }
- 
-  }
-  #header-ul-mobile{
-    display:none;
-    
-  }
+.sidebar-mobile{
+  position:absolute;
+  left:-7em;
+  display:block;
+  background:#333;
+  height: 100%;
+  transition: left 0.5s linear ;
+     #header-ul-mobile{
+        border-radius:0.5em;
+        padding:0;
+        margin:0;
+          li{
+            list-style: none;
+            a{
+              background:#1C1E1F;
+              color:#ccc;
+              display:block;
+              padding:1em;
+            }
+          }
 
+  }
+  
+#burger-btn{
+  position:absolute;
+  right:-5em;
+  top:0;
+  display:inline-block;
+  vertical-align: middle;
+  width:2em;
+  height:2em;
+  padding:0.3em 0.3em 0 0.3em;
+  border:2px #333 solid;
+  border-radius: 0.5em;
+  cursor:pointer;
+    span {
+      display:block;
+      height: 0.3em;
+      background: #333;
+      margin: 0.2em 0;
+      transition: 0.4s;
+      border-radius:0.5em;
+     } 
+
+  }
+  }
+  .sidebar-mobile-visible{
+    transition: left 0.5s linear ;
+    position:absolute;
+    left:1em;
+  }
 
 .s1-navbar{
   width:100%;
@@ -186,8 +183,20 @@ a:hover{
     
 	}
 }
+#header-ul{
+    display:flex;
+    list-style:none;
+    float: right;
+    margin:auto;
+    width: 100%;
+    li{
+      list-style: none;
+      a{
+        margin-right:1em;
+      }
+}
 
-
+}
 #intro{
   position: absolute;
   height: 2em;
@@ -241,16 +250,8 @@ a:hover{
   display:flex;
   justify-content: space-between;
 }
-ul {
-  display:flex;
-  list-style:none;
-  float: right;
-  margin:auto;
-  width: 100%;
-}
-#header-li{
-  margin-right:1em;
-}
+
+
 
 h2{
   margin:auto;
