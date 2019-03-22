@@ -60,7 +60,7 @@ a:hover{
 .sidebar-mobile{
   position:absolute;
   left:-7em;
-  display:block;
+  display:none;
   background:#333;
   height: 100%;
   transition: left 0.5s linear ;
@@ -77,36 +77,34 @@ a:hover{
               padding:1em;
             }
           }
+     }
+          #burger-btn{
+            position:absolute;
+            right:-5em;
+            top:0;
+            display:inline-block;
+            vertical-align: middle;
+            width:2em;
+            height:2em;
+            padding:0.3em 0.3em 0 0.3em;
+            border:2px #333 solid;
+            border-radius: 0.5em;
+            cursor:pointer;
+              span {
+                display:block;
+                height: 0.3em;
+                background: #333;
+                margin: 0.2em 0;
+                transition: 0.4s;
+                border-radius:0.5em;
+              } 
 
-  }
-  
-#burger-btn{
-  position:absolute;
-  right:-5em;
-  top:0;
-  display:inline-block;
-  vertical-align: middle;
-  width:2em;
-  height:2em;
-  padding:0.3em 0.3em 0 0.3em;
-  border:2px #333 solid;
-  border-radius: 0.5em;
-  cursor:pointer;
-    span {
-      display:block;
-      height: 0.3em;
-      background: #333;
-      margin: 0.2em 0;
-      transition: 0.4s;
-      border-radius:0.5em;
-     } 
-
-  }
-  }
-  .sidebar-mobile-visible{
+                    }
+     }
+.sidebar-mobile-visible{
     transition: left 0.5s linear ;
     position:absolute;
-    left:1em;
+    left:0;
   }
 
 .s1-navbar{

@@ -51,14 +51,14 @@
     .s1-navbar{ display:none; }
     #content{font-size:1.2em; font-weight: 500;}
     #intro{font-weight:600;}
-    #burger,#header-ul-mobile{display: block;}
+   .sidebar-mobile{display: block;}
   }
   @media only screen and (min-width: 481px) and (max-width: 767px){
     #inner{margin-top:20%;}
     .s1-navbar{ display:none;}
     #content{font-size:1.2em; font-weight: 500;}
     #intro{font-weight:600;}
-    #burger,#header-ul-mobile{display: block;}
+    .sidebar-mobile{display: block;}
   }
 
     //tablet device and big mobile
