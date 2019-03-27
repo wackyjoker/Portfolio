@@ -1,5 +1,5 @@
 import {createStore,combineReducers} from 'redux';
-import expensesReducer from '../redux/reducers/expenses';
+import normalReducer from '../redux/reducers/reducer';
 
 
 export default () => {
@@ -7,7 +7,7 @@ export default () => {
     
 	const store = createStore(
     combineReducers({
-        expenses:expensesReducer,
+        expenses:normalReducer,
     }),window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
