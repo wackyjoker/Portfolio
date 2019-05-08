@@ -12,10 +12,7 @@ a{
   color:rgba(255, 255, 255, 0.753);
   
 }
-a:hover{
-  text-decoration:underline;
-  text-shadow: 0 0 15px #fff, 0 0 30px hsla(0,0%,100%,.3)
-}
+
 .section1{
   display: flex;
   background-image:url($urls1);
@@ -48,7 +45,10 @@ a:hover{
   justify-content: space-between;
   overflow:visible;
   padding: 1.5em 1em;
-  
+  a:hover{
+    text-decoration:underline;
+    text-shadow: 0 0 15px #fff, 0 0 30px hsla(0,0%,100%,.3)
+  }
   }
 
 @keyframes headerin{
@@ -213,11 +213,11 @@ a:hover{
   padding:0.5em;
   border-radius: 0.5em;
   &:after{
-    background-image: url($urlarrow);
+    background-image: url($urlArrow);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    bottom: 0.2em;
+    bottom: 0.1em;
     content: '';
     display: block;
     height: 1.5em;
@@ -225,11 +225,12 @@ a:hover{
     margin: 0 0 0 -0.75em;
     position: absolute;
     width: 1.5em;
+    transition:1s all;
+    }
+    &:hover:after{
+      background-size:auto; 
+    }
     
-    }
-    &:hover{
-      color:rgb(223, 223, 223);
-    }
 }
 
 @keyframes introtime {
@@ -271,12 +272,7 @@ button {
 
 
 
-#section2{
-  background-image:url($urls2);
-  height: 100vh;
-  z-index:10;
-  position:relative;
-}
+
 
 
 

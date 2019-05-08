@@ -1,0 +1,25 @@
+<svg width="137.3" height="139.3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <circle fill="#fd8469" r="66.2" id="XMLID_384_" cy="69.8" cx="68.7" class="st0"/>
+  <defs>
+   <circle r="66.2" id="XMLID_382_" cy="69.8" cx="68.8"/>
+  </defs>
+  <clipPath id="XMLID_135_">
+   <use id="svg_1" xlink:href="#XMLID_382_"/>
+  </clipPath>
+  <polygon fill="#070808" clip-path="url(#XMLID_135_)" opacity="0.19" points="94.5,41.6 136.5,82 134.1,136 89.3,134.1 44.8,98  " id="XMLID_383_" class="st1"/>
+  <circle fill="#215c6d" r="37.6" id="XMLID_378_" cy="69" cx="68.8" class="st2"/>
+  <circle fill="#ffffff" r="32.5" id="XMLID_377_" cy="69" cx="68.7" class="st3"/>
+  <path fill="#3b4a51" id="XMLID_374_" d="m67.5,69.9l0.3,18.4c0,0 1.4,1.8 2.4,0l-0.4,-18.1l-0.1,0c-0.3,0.1 -0.4,0.3 -1.3,0.2c-0.3,0 -0.6,-0.2 -0.9,-0.5l0,0z" class="st4"/>
+  <path fill="#3b4a51" id="XMLID_371_" d="m70.5,69.9l18.9,-0.1c0,0 1.7,-0.8 -0.1,-1.8l-18.7,0.3c0,0 0.1,0.4 0.1,0.8c0,0.3 -0.2,0.8 -0.2,0.8z" class="st4"/>
+  <rect fill="#215c6d" y="53.6" x="64.5" width="0.6" transform="matrix(-0.7071,0.7071,-0.7071,-0.7071,156.3836,64.8282) " id="XMLID_43_" height="22.5" class="st2"/>
+  <circle fill="#215c6d" r="0.5" id="XMLID_41_" cy="72.6" cx="72.6" class="st2"/>
+  <circle fill="#215c6d" r="0.6" id="XMLID_40_" cy="57" cx="57" class="st2"/>
+  <circle stroke-miterlimit="10" stroke="#235c6d" fill="#ffffff" r="2.1" id="XMLID_331_" cy="69" cx="68.8" class="st5"/>
+ </g>
+</svg>

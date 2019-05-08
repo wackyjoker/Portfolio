@@ -1,5 +1,6 @@
 // Colors
 // Spacing
+$xs-size:0.8em;
 $s-size: 1.2em;
 $m-size: 1.6em;
 $l-size: 3.2em;
@@ -19,4 +20,31 @@ $surfboard-height: (min-height 1000px) (orientation portrait);
 
 $urls1: "/images/bgs1.jpg";
 $urls2: "/images/bgs2.jpg";
-$urlarrow:'/images/arrow.svg';
+$urlArrow:'/images/arrow-down.svg';
+$urlFacebook:'/images/facebook.svg';
+$urlGithub:'/images/github.svg';
+$urlLinkedin:'/images/linkedin.svg';
+$urlTwitter:'/images/twitter.svg';
+$urlFast:'/images/fast.svg';
+$urlResponsive:'/images/responsive.svg';
+$urlClock:'/images/clock.svg';
+$urlDynamic:'/images/dynamic.svg';
+
+.icon{
+	height:5em;
+	width:5em;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	bottom:0.2em;
+}
+body{
+    text-align:center;
+}
+
+
+.content-box{
+    display:flex;
+    flex-direction:column;
+    padding:0 1em;
+}
