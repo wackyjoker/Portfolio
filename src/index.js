@@ -1,30 +1,26 @@
-import React from 'react';
+import React from "react";
 import jQuery from "jquery";
-import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-import AppRouters from './routers/AppRouters';
-import configureStore from './containers/configureStore';
-import './styles/style.scss';
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import AppRouters from "./routers/AppRouters";
+import configureStore from "./containers/configureStore";
+import "./styles/style.scss";
 
 const store = configureStore();
 
-
-import jQuery from "jquery";
 window.$ = window.jQuery = jQuery;
 
-
 const action = {
-    type:'SHOW_BAR',
-    payload:{
-        newState:'new roll'
-    }
-    
+  type: "SHOW_BAR",
+  payload: {
+    newState: "new roll"
+  }
 };
 
 const jsx = (
-    <Provider store = {store}>
+  <Provider store={store}>
     <AppRouters />
-    </Provider>
+  </Provider>
 );
 
-ReactDOM.render(jsx,document.getElementById('app'));
+ReactDOM.render(jsx, document.getElementById("app"));
