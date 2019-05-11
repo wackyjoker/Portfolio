@@ -10,7 +10,7 @@
     "start": "node server/server.js",
     "dev-server": "webpack-dev-server  --mode development",
     "server":"nodemon server",
-    
+    "heroku-postbuild": "webpack -p"
   },
   "author": "",
   "license": "ISC",
