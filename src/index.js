@@ -9,7 +9,7 @@ import './styles/style.scss';
 const store = configureStore();
 
 
-
+import jQuery from "jquery";
 window.$ = window.jQuery = jQuery;
 
 
