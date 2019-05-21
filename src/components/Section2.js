@@ -47,14 +47,30 @@ const Section2 = () => (
     I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences. </p>
     </div>
     <div className="progressBar">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    </div>
+            <div className="progressbar-progress">
+            <span>HTML</span>
+            <div className="progressbar-complete" style={{width:"43%"}}></div>
+            <span>60%</span>
+           </div>
+           <div className="progressbar-progress">
+           <span>CSS</span>
+           <div className="progressbar-complete" style={{width:"50%"}}></div>
+           <span>70%</span>
+           </div>
+           <div className="progressbar-progress">
+           <span>Javascript</span>
+           <div className="progressbar-complete" style={{width:"35%"}}></div>
+           <span>50%</span>
+           </div>
+           <div className="progressbar-progress">
+           <span>React</span>
+           <div className="progressbar-complete" style={{width:"35%"}}></div>
+           <span>50%</span>
+           </div>
+
+
+  </div>
+  </div>
   </div>
     
   </section>

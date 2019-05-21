@@ -3,6 +3,7 @@ html, body {
   margin: 0px;
   font-family: Helvetica, Arial, sans-serif;
   font-size: $s-size;
+  min-width: 360px;
 }
 #router{
   z-index:-10000;

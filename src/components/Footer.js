@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 
 const Footer = ()=>(
 
@@ -7,10 +7,10 @@ const Footer = ()=>(
 <div id='footer-container'>
 
 <div id='ftRights'>
-<p>©copyrights 2018 wacKYJoker All rights Served.</p>
+<p>©2018 <span>wacKY Joker</span> All rights Served.</p>
 <div className='icons'>
 
-<a href='#'><svg className="icon facebook"/></a>
+<Link to="https://github.com/wackyjoker/Portfolio"><svg className="icon facebook"/></Link>
 <a href='#'><svg className='icon github'/></a>
 <a href='#'><svg className='icon twitter'/></a>
 <a href='#'><svg className='icon linkedin'/></a>
