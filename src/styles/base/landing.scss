@@ -10,24 +10,40 @@ html, body {
 a{
   text-decoration: none;
   color:rgba(255, 255, 255, 0.753);
-  
 }
 
 .section1{
   display: flex;
-  background-image:url($urls1);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, .3) ,
+    rgba(0, 0, 0, .5)
+  ),
+  linear-gradient(rgba(0, 0, 0, 0.74), rgba(200, 200, 200, 0.5)), black;
   width: 100%;
   min-height:896px;
   height:100vh;
 	z-index: 10;
   background-size:cover;
-  background-color: #80a3db;
   flex-direction: column;
   text-align: center;
-  overflow:hidden;
+
   position: relative;
-  background-position: 50% 50%;
+
+  &::after {
+    content: "";
+    background: url($urls1);
+    background-size:cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+    background-position: 50% 50%;
   background-repeat: no-repeat;
+  }
 }
 
 #header{
@@ -65,7 +81,6 @@ a{
   height: 100%;
   transition: left 0.5s linear ;
      #header-ul-mobile{
-        border-radius:0.5em;
         padding:0;
         margin:0;
           li{
@@ -120,7 +135,7 @@ a{
 #inner{
   animation: 2s innerin 2s forwards;
   opacity:0;
-  padding-top:10em;
+  margin-top:10em;
   h2{
   color: white;
    text-shadow:

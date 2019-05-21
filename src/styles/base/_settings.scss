@@ -29,10 +29,13 @@ $urlFast:'/images/fast.svg';
 $urlResponsive:'/images/responsive.svg';
 $urlClock:'/images/clock.svg';
 $urlDynamic:'/images/dynamic.svg';
+$urlIntuitive:'/images/intuitive.svg';
+$urlWacky:'/images/wacky.jpg';
 
 .icon{
 	height:5em;
 	width:5em;
+	align-self: center;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
