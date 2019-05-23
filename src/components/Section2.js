@@ -49,25 +49,32 @@ const Section2 = () => (
     <div className="progressBar">
             <div className="progressbar-progress">
             <span>HTML</span>
-            <div className="progressbar-complete" style={{width:"43%"}}></div>
+          <div className="complete-container">
+            <div className="progressbar-complete" style={{width:"60%"}}></div>
             <span>60%</span>
+           </div>
            </div>
            <div className="progressbar-progress">
            <span>CSS</span>
-           <div className="progressbar-complete" style={{width:"50%"}}></div>
+          <div className="complete-container">
+           <div className="progressbar-complete" style={{width:"70%"}}></div>
            <span>70%</span>
            </div>
+           </div>
            <div className="progressbar-progress">
-           <span>Javascript</span>
-           <div className="progressbar-complete" style={{width:"35%"}}></div>
+           <span>JS</span>
+          <div className="complete-container">
+           <div className="progressbar-complete" style={{width:"50%"}}></div>
            <span>50%</span>
+           </div>
            </div>
            <div className="progressbar-progress">
            <span>React</span>
-           <div className="progressbar-complete" style={{width:"35%"}}></div>
+           <div className="complete-container">
+           <div className="progressbar-complete" style={{width:"50%"}}></div>
            <span>50%</span>
            </div>
-
+          </div>
 
   </div>
   </div>
