@@ -35,7 +35,6 @@ const Section2 = () => (
                   Strong preference for easy to use, intuitive UX/UI.
                 </p>
               </div>
-              <svg className="icon" />
         </div>
     </div>
 

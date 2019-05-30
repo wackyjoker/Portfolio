@@ -29,7 +29,6 @@ a{
   flex-direction: column;
   text-align: center;
   position: relative;
-
   &::after {
     content: "";
     background: url($urls1);
