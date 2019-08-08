@@ -10,8 +10,8 @@ const Footer = ()=>(
 <p>©2018 <span>wacKY Joker</span> All rights Served.</p>
 <div className='icons'>
 
-<Link to="https://github.com/wackyjoker/Portfolio"><svg className="icon facebook"/></Link>
-<a href='#'><svg className='icon github'/></a>
+<a href=""><svg className="icon facebook"/></a>
+<a href='https://github.com/wackyjoker/Portfolio'><svg className='icon github'/></a>
 <a href='#'><svg className='icon twitter'/></a>
 <a href='#'><svg className='icon linkedin'/></a>
 

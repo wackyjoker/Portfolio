@@ -7,12 +7,14 @@ const express = require("express"),
 
 //db config
 const db = require("../config/keys.js").mongoURI;
-
+//db connect
 mongoose
   .connect(db)
   .then(() => console.log("mongoDB connected"))
   .catch(err => console.log(err));
 
+
+// favicon
 app.use("/images", express.static(__dirname + "../public/images"));
 app.use(favicon(path.join(__dirname, "../public/images", "eric.ico")));
 
