@@ -10,12 +10,45 @@
     <link rel="icon" type="image/ico" href="/images/eric.ico" />
     
     <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" > -->
-    
+    <style>
+    #loader{
+
+
+            
+            border:15px solid gainsboro;
+            border-left:tomato 15px solid;
+            height:5em; 
+            width:5em; 
+            margin:40vh auto auto auto;
+            border-radius: 50%;
+            -webkit-animation : spin 0.5s linear infinite; /* Safari */
+             animation: spin 0.5s linear infinite;
+            }
+            /* Safari */
+            @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+            }
+
+            @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+            }
+
+    </style>
 
 </head>
 
 <body>
-    <div id="app"><h1>404 page not found</h1></div>
+    <div id="app">
+        
+        <div id="loader"></div>
+        <p style="
+        text-align: center;
+        ">Loading
+        </p>
+    
+    </div>
     
     <script src="/dist/bundle.js" ></script>
 </body>
