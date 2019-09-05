@@ -1,40 +1,36 @@
 import React from "react";
+import ContentBox from './section2/ContentBox';
+import {Content} from './section2/Content';
 
-const Section2 = () => (
+
+class Section2 extends React.Component{
+
+  render(){
+    const Contents=Content.map((content,index)=>(
+      
+      <ContentBox 
+          key={index} 
+          box={content.box}
+          svg={content.svg}
+          type={content.type}
+          description={content.description}
+          />
+
+    ))
+    
+    
+return(
   <section id="section2">
     <div className="s2-container">
       <h2>ABOUT</h2>
       <hr />
       <div className="svg-wrap">
           <div className="s2-wrap">
-                <div className="box1 content-box">
-                  <svg className="icon fast" />
-                  Fast
-                  <p>
-                    Fast load times and lag free interaction, my highest priority.
-                  </p>
-                </div>
-                <div className="box2 content-box">
-                  <svg className="icon responsive" />
-                  Responsive
-                  <p>My layouts will work on any device, big or small. </p>
-                </div>
+          {Contents}
+ 
               </div>
         <div className="s2-wrap">
-              <div className="box3 content-box">
-                <svg className="icon dynamic" />
-                Dynamic
-                <p>
-                  Websites don't have to be static, I love making pages come to life.
-                </p>
-              </div>
-            <div className="box4 content-box">
-                <svg className="icon intuitive" />
-                Intuitive
-                <p>
-                  Strong preference for easy to use, intuitive UX/UI.
-                </p>
-              </div>
+
         </div>
     </div>
 
@@ -81,5 +77,6 @@ const Section2 = () => (
     
   </section>
 );
-
+              }
+}
 export default Section2;
