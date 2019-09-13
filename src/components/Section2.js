@@ -1,23 +1,34 @@
 import React from "react";
 import ContentBox from './section2/ContentBox';
 import {Content} from './section2/Content';
+import {Content2} from './section2/Content';
 
 
 class Section2 extends React.Component{
 
   render(){
-    const Contents=Content.map((content,index)=>(
-      
-      <ContentBox 
-          key={index} 
-          box={content.box}
-          svg={content.svg}
-          type={content.type}
-          description={content.description}
-          />
-
-    ))
-    
+    const Contents=Content.map((content,index)=>
+            (
+         <ContentBox 
+         key={index} 
+         box={content.box}
+         svg={content.svg}
+         type={content.type}
+         description={content.description}
+         />
+        )
+    )
+    const Contents2 = Content2.map((content,index)=>
+    (
+        <ContentBox 
+        key={index} 
+        box={content.box}
+        svg={content.svg}
+        type={content.type}
+        description={content.description}
+        />
+        )
+     )
     
 return(
   <section id="section2">
@@ -25,13 +36,12 @@ return(
       <h2>ABOUT</h2>
       <hr />
       <div className="svg-wrap">
-          <div className="s2-wrap">
-          {Contents}
- 
-              </div>
-        <div className="s2-wrap">
-
-        </div>
+      <div className="s2-wrap">
+      {Contents}
+      </div>
+      <div className="s2-wrap">
+      {Contents2}
+      </div>
     </div>
 
     <div className="wacky">
