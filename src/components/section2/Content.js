@@ -8,7 +8,10 @@ export const Content=[
      svg:"icon responsive",
      type:"Responsive",
      description:"My layouts will work on any device, big or small."
-    },
+    }  
+]
+
+export const Content2=[
     {box:"box3 content-box",
      svg:"icon dynamic",
      type:"Dynamic",
