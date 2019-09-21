@@ -2,6 +2,7 @@ import React from "react";
 import ContentBox from './section2/ContentBox';
 import {Content} from './section2/Content';
 import {Content2} from './section2/Content';
+import {Progress} from './section2/Progress';
 
 
 class Section2 extends React.Component{

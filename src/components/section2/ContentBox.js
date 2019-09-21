@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class ContentBox extends Component {
+export default class ContentBox extends React.Component {
     
     render() {
         return (
