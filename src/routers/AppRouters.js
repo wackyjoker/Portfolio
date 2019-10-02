@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Section2 from '../components/Section2';
 import Section1 from '../components/Section1';
 import Footer from '../components/Footer';
+import Contact from '../components/Contact';
 
 const AppRouter=()=>(
     <BrowserRouter>
@@ -12,6 +13,7 @@ const AppRouter=()=>(
     <Section1 />
     <Switch>
     <Route path="/" component={Section2} exact={true}/>
+    <Route path="/contact" component={Contact} exact={true}/>
     </Switch>
     <Footer />
     </div>

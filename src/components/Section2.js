@@ -2,12 +2,37 @@ import React from "react";
 import ContentBox from './section2/ContentBox';
 import {Content} from './section2/Content';
 import {Content2} from './section2/Content';
-import {Progress} from './section2/Progress';
+import {ProgressBar} from './section2/ProgressBar';
 
 
 class Section2 extends React.Component{
 
+   proGress() {
+    console.log(this.refs);
+    var prg = this.refs.progressbarComplete;
+    var percent = this.refs.percentCount;
+    var counter = 3;
+    var progress = 3;
+    var id = setInterval(frame,50);
+
+    function frame(){
+        if(progress == 99 && counter == 99){
+            prg.style.width="20%";
+            percent.innerHTML="Not Enough";
+            clearInterval(id);
+        } else {
+            progress += 3;
+            counter += 3;
+            prg.style.width = progress + '%';
+            percent.innerHTML= counter + '%';
+        }
+    }
+}
+
+
   render(){
+    var prg = document.getElementsByClassName('progressbar-complete');
+    console.log(this.refs);
     const Contents=Content.map((content,index)=>
             (
          <ContentBox 
@@ -54,17 +79,17 @@ return(
     </div>
     <div className="progressBar">
             <div className="progressbar-progress">
-            <span>HTML</span>
+            <span onClick={this.proGress.bind(this)}>HTML</span>
           <div className="complete-container">
-            <div className="progressbar-complete" style={{width:"60%"}}></div>
-            <span>60%</span>
+            <div ref="progressbarComplete" className="progressbar-complete" style={{width:"60%"}}></div>
+            <span ref="percentCount" id="percentCount">60%</span>
            </div>
            </div>
            <div className="progressbar-progress">
            <span>CSS</span>
           <div className="complete-container">
-           <div className="progressbar-complete" style={{width:"70%"}}></div>
-           <span>70%</span>
+           <div ref="progressbarComplete" className="progressbar-complete" style={{width:"70%"}}></div>
+           <span ref="percentCount">70%</span>
            </div>
            </div>
            <div className="progressbar-progress">
