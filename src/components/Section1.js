@@ -1,6 +1,5 @@
 import React from 'react';
 
-console.log('joker');
 const Section1 = ()=>(
 <section  className="section1">
 <div id="inner">

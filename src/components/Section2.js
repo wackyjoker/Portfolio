@@ -2,7 +2,8 @@ import React from "react";
 import ContentBox from './section2/ContentBox';
 import {Content} from './section2/Content';
 import {Content2} from './section2/Content';
-import {ProgressBar} from './section2/ProgressBar';
+import ProgressBar from './section2/ProgressBar';
+import{Progress} from './section2/Progress';
 
 
 class Section2 extends React.Component{
@@ -31,7 +32,6 @@ class Section2 extends React.Component{
 
 
   render(){
-    var prg = document.getElementsByClassName('progressbar-complete');
     console.log(this.refs);
     const Contents=Content.map((content,index)=>
             (
@@ -43,7 +43,7 @@ class Section2 extends React.Component{
          description={content.description}
          />
         )
-    )
+    );
     const Contents2 = Content2.map((content,index)=>
     (
         <ContentBox 
@@ -54,8 +54,19 @@ class Section2 extends React.Component{
         description={content.description}
         />
         )
-     )
-    
+     );
+
+    const ProgressBars = Progress.map((progress,index)=>(
+      <ProgressBar
+        key={index} 
+        skill={progress.skill}
+        percentage={progress.percentage}
+        width={progress.width}
+      />
+    ));
+
+    console.log(ProgressBars);
+  
 return(
   <section id="section2">
     <div className="s2-container">
@@ -78,13 +89,7 @@ return(
     I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences. </p>
     </div>
     <div className="progressBar">
-            <div className="progressbar-progress">
-            <span onClick={this.proGress.bind(this)}>HTML</span>
-          <div className="complete-container">
-            <div ref="progressbarComplete" className="progressbar-complete" style={{width:"60%"}}></div>
-            <span ref="percentCount" id="percentCount">60%</span>
-           </div>
-           </div>
+          {ProgressBars}
            <div className="progressbar-progress">
            <span>CSS</span>
           <div className="complete-container">
@@ -92,6 +97,7 @@ return(
            <span ref="percentCount">70%</span>
            </div>
            </div>
+
            <div className="progressbar-progress">
            <span>JS</span>
           <div className="complete-container">
@@ -99,6 +105,7 @@ return(
            <span>50%</span>
            </div>
            </div>
+
            <div className="progressbar-progress">
            <span>React</span>
            <div className="complete-container">

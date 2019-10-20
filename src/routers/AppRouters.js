@@ -12,8 +12,8 @@ const AppRouter=()=>(
     <Header />
     <Section1 />
     <Switch>
-    <Route path="/" component={Section2} exact={true}/>
-    <Route path="/contact" component={Contact} exact={true}/>
+    {/*<Route path="/" component={Section2} exact={true}/>*/}
+    <Section2 />
     </Switch>
     <Footer />
     </div>
