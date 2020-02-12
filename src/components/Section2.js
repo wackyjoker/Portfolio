@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import ContentBox from './section2/ContentBox';
 import {Content} from './section2/Content';
 import {Content2} from './section2/Content';
@@ -9,37 +10,57 @@ import{Progress} from './section2/Progress';
 class Section2 extends React.Component{
   constructor(props) {
     super(props);
+
     this.progressbarComplete = React.createRef();
     this.percentCount = React.createRef();
-    
+    this.list = React.createRef();
+    this.proGress= this.proGress.bind(this);
+    this._handleScroll=this._handleScroll.bind(this);
+    this.state={scrolled:false}; 
   }
+  
 
   componentDidMount(){
+    console.log("--------------- :",this.refs);
     console.log(this.progressbarComplete.current.style.width);
+    const list = ReactDOM.findDOMNode(this.list.current);
+    window.addEventListener("scroll",this._handleScroll); 
   }
+  componentWillUnmount() {
+    const list = ReactDOM.findDOMNode(this.list.current);
+    window.removeEventListener('scroll', this._handleScroll);
+    this.state.scrolled?this.proGress:console.log("nothing");
+}
 
+_handleScroll() {
+  let isHere= window.scrollY >= 1000;
+    console.log("element.offsetTop value  is :"+this.list.current.offsetTop+"-----");
+    isHere?this.setState({scrolled:true},this.proGress):this.setState({scrolled:false});
+    
+}
 
    proGress(){
     
-    var prg = this.progressbarComplete;
-    var percent = this.percentCount;
-    var counter = 3;
-    var progress = 3;
+    let prg = this.progressbarComplete;
+    let percent = this.percentCount;
+    let counter = 3;
+    let progress = 3;
     console.log(prg.current.style.width);
-    var id = setInterval(frame,50);
-    
+    let id = setInterval(frame,50);
+      
     function frame(){
         if(progress == 99 && counter == 99){
             prg.current.style.width="20%";
             percent.current.innerHTML="Not Enough";
             clearInterval(id);
-        } else {
+        } else {   
             progress += 3;
             counter += 3;
             prg.current.style.width = progress + '%';
             percent.current.innerHTML= counter + '%';
         }
     }
+    window.removeEventListener("scroll",this._handleScroll);
 }
   
 
@@ -89,7 +110,7 @@ return(
       </div>
       <div className="s2-wrap">
       {Contents2}
-      </div>
+      </div>  
     </div>
 
     <div className="wacky">
@@ -101,11 +122,18 @@ return(
     </div>
     <div className="progressBar">
           {ProgressBars}
-           <div onClick={this.proGress.bind(this)} className="progressbar-progress" style={{cursor:"pointer"}}>
+           <div ref={this.list} className="progressbar-progress" style={{cursor:"pointer"}}>
            <span>CSS</span>
           <div className="complete-container">
            <div ref={this.progressbarComplete} className="progressbar-complete" style={{width:"70%"}}></div>
            <span ref={this.percentCount}>70%</span>
+           </div>
+           </div>
+           <div ref={this.list} className="progressbar-progress" style={{cursor:"pointer"}}>
+           <span>SCSS</span>
+          <div className="complete-container">
+           <div ref={this.progressbarComplete} className="progressbar-complete" style={{width:"75%"}}></div>
+           <span ref={this.percentCount}>75%</span>
            </div>
            </div>
 

@@ -14,6 +14,7 @@ const AppRouter=()=>(
     <Switch>
     {/*<Route path="/" component={Section2} exact={true}/>*/}
     <Section2 />
+    <Contact />
     </Switch>
     <Footer />
     </div>
